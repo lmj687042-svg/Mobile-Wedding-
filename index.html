@@ -8,43 +8,47 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <main class="page">
+  <!-- 상단 주황색 고정 헤더 -->
   <header class="top-header">
-    <div>The Wedding of</div>
-    <div class="menu-icon">☰</div>
+    <div class="header-title">The Wedding of</div>
+    <button class="menu-icon" aria-label="메뉴">☰</button>
   </header>
 
-  <!-- COVER HEADER SECTION -->
+  <!-- COVER SECTION (첫 페이지) -->
   <section class="cover">
     <div class="cover-hero-header">
       <div class="cover-kicker">You're invited</div>
       <h1 class="cover-title">
-        <span id="groomName">Groom</span><br>&<br><span id="brideName">Bride</span>
+        <span id="groomName">이용재</span><br>
+        <span class="ampersand">&</span><br>
+        <span id="brideName">이민진</span>
       </h1>
       <div class="cover-info">
-        <div id="coverDate">2026.12.31 목요일 오후 12시</div>
-        <div id="coverVenue">예식장 이름</div>
+        <div id="coverDate">2027.01.02 토요일 오후 12:00</div>
+        <div id="coverVenue">아펠가모 선릉</div>
       </div>
     </div>
+
     <div class="cover-photo-wrap">
-      <img class="cover-photo" src="images/hero/1.jpg" alt="메인 사진">
+      <img class="cover-photo" src="images/hero/1.jpg" alt="메인 웨딩 사진">
     </div>
   </section>
 
-  <!-- INTRO SECTION -->
+  <!-- INVITATION SECTION -->
   <section class="section">
     <div class="intro-text-block reveal">
-      <h2>Join us<br>for our wedding</h2>
+      <h2 class="join-title">Join us<br>for our wedding</h2>
       
       <div class="family-info">
-        <div>아버님 · 어머님 <span class="role">의 아들</span> <strong id="groomFullName">신랑 이름</strong></div>
-        <div>아버님 · 어머님 <span class="role">의 딸</span> <strong id="brideFullName">신부 이름</strong></div>
+        <div>아버님 · 어머님 <span class="role">의 아들</span> <strong id="groomFullName">이용재</strong></div>
+        <div>아버님 · 어머님 <span class="role">의 딸</span> <strong id="brideFullName">이민진</strong></div>
       </div>
 
       <div class="section-title">INVITATION</div>
@@ -60,8 +64,8 @@
   <!-- CALENDAR SECTION -->
   <section class="section">
     <div class="date-lead reveal">
-      <div class="big-date" id="dateLead">2026.12.31</div>
-      <div class="weekday" id="weekday">목요일 오후 12시</div>
+      <div class="big-date" id="dateLead">2027.01.02</div>
+      <div class="weekday" id="weekday">토요일 오후 12시</div>
     </div>
 
     <div class="calendar reveal">
@@ -80,8 +84,10 @@
     <div class="section-title">LOCATION</div>
 
     <div class="location-info reveal">
-      <div class="venue" id="venueName">예식장 이름</div>
-      <div class="address" id="venueAddress">예식장 주소 층/홀 정보<br>02-000-0000</div>
+      <div class="venue" id="venueName">아펠가모 선릉</div>
+      <div class="address" id="venueAddress">
+        서울특별시 강남구 테헤란로 322 한신인터밸리24 빌딩 4층<br>02-2186-6888
+      </div>
 
       <div class="map-buttons">
         <a class="chip-button" id="naverMap" href="#" target="_blank">네이버 지도 ↗</a>
@@ -92,11 +98,15 @@
       <div class="transport">
         <div class="transport-row">
           <strong>[지하철]</strong>
-          <span id="subway">지하철 이용 안내 정보가 입력됩니다.</span>
+          <span id="subway">2호선 / 수인분당선 선릉역 4번 출구에서 도보 3분</span>
         </div>
         <div class="transport-row">
           <strong>[버스]</strong>
-          <span id="bus">버스 이용 안내 정보가 입력됩니다.</span>
+          <span id="bus">선릉역 정류장 하차 (간선: 146, 341, 360 / 지선: 4412)</span>
+        </div>
+        <div class="transport-row">
+          <strong>[주차]</strong>
+          <span id="parking">건물 내 지하 주차장 이용 (하객 2시간 무료 주차)</span>
         </div>
       </div>
     </div>
@@ -105,7 +115,7 @@
   <!-- ACCOUNT SECTION -->
   <section class="section">
     <div class="section-title">ACCOUNT</div>
-    <div style="color: var(--gray-text); font-size: 13px; margin-bottom: 30px;">마음 전하실 곳</div>
+    <div class="account-subtitle">마음 전하실 곳</div>
 
     <div class="account-list">
       <div class="account-group">
@@ -114,7 +124,7 @@
         </button>
         <div class="account-content">
           <div class="account-row">
-            <span>OO은행 000-0000-0000 (신랑)</span>
+            <span>OO은행 000-0000-0000 (이용재)</span>
             <button class="copy-btn" data-copy="000-0000-0000">복사</button>
           </div>
         </div>
@@ -126,7 +136,7 @@
         </button>
         <div class="account-content">
           <div class="account-row">
-            <span>OO은행 000-0000-0000 (신부)</span>
+            <span>OO은행 000-0000-0000 (이민진)</span>
             <button class="copy-btn" data-copy="000-0000-0000">복사</button>
           </div>
         </div>
