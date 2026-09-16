@@ -4,163 +4,320 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#ff4500">
-
+  
   <!-- 카카오톡 / SNS 공유 미리보기 (Open Graph) 태그 -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="이용재 ♡ 이민진 결혼합니다">
   <meta property="og:description" content="2027년 1월 2일 토요일 오후 12시, 아펠가모 선릉">
-  <!-- 📸 og 폴더 안의 1.jpg 대표 사진 지정 -->
   <meta property="og:image" content="https://lmj687042-svg.github.io/Mobile-Wedding-/images/og/1.jpg">
   <meta property="og:url" content="https://lmj687042-svg.github.io/Mobile-Wedding-/">
 
+  <!-- 트위터 카카오톡 보조 태그 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="이용재 ♡ 이민진 결혼합니다">
+  <meta name="twitter:description" content="2027년 1월 2일 토요일 오후 12시, 아펠가모 선릉">
+  <meta name="twitter:image" content="https://lmj687042-svg.github.io/Mobile-Wedding-/images/og/1.jpg">
+
   <title>이용재 & 이민진 · OUR WEDDING</title>
 
+  <!-- Noto Serif KR / Noto Sans KR / Cormorant Garamond / Montserrat 폰트 CDN -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome (아이콘) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Swiper.js CSS (갤러리 슬라이더) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- Kakao Map API -->
+  <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_KAKAO_MAP_API_KEY&libraries=services"></script>
+
+  <!-- 커스텀 스타일시트 -->
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<main class="page">
-  <header class="top-header">
-    <div class="header-title">The Wedding of</div>
-    <button class="menu-icon" aria-label="메뉴">☰</button>
-  </header>
+  <!-- BGM 플레이어 (우측 상단 고정) -->
+  <div class="bgm-player" id="bgmToggle">
+    <i class="fa-solid fa-music"></i>
+    <audio id="weddingBgm" loop preload="auto">
+      <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+  </div>
 
-  <section class="cover">
-    <div class="cover-hero-header">
-      <div class="cover-kicker">You're invited</div>
-      <h1 class="cover-title">
-        <span id="groomName">이용재</span><br>
-        <span class="ampersand">&</span><br>
-        <span id="brideName">이민진</span>
-      </h1>
-      <div class="cover-info">
-        <div id="coverDate">2027.01.02 토요일 오후 12:00</div>
-        <div id="coverVenue">아펠가모 선릉</div>
+  <div class="wedding-container">
+    
+    <!-- 1. HERO SECTION (메인 커버) -->
+    <section class="hero-section">
+      <div class="hero-subtitle">WEDDING INVITATION</div>
+      <h1 class="hero-names">YONGJAE & MINJIN</h1>
+      <div class="hero-image-wrapper">
+        <img src="images/hero/1.jpg" alt="이용재 이민진 웨딩 메인 사진" class="hero-img">
       </div>
-    </div>
-
-    <div class="cover-photo-wrap">
-      <img class="cover-photo" src="images/hero/1.jpg" alt="메인 사진">
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="intro-text-block reveal">
-      <h2 class="join-title">Join us<br>for our wedding</h2>
-
-      <div class="family-info">
-        <div>이종수 · 김영희 <span class="role">의 아들</span> <strong id="groomFullName">용재</strong></div>
-        <div>이철수 · 박순자 <span class="role">의 딸</span> <strong id="brideFullName">민진</strong></div>
+      <div class="hero-date-location">
+        <p class="hero-date">2027. 01. 02. SAT PM 12:00</p>
+        <p class="hero-venue">아펠가모 선릉</p>
       </div>
+    </section>
 
-      <div class="section-title">INVITATION</div>
-      <div class="story-intro">
-        서로가 마주 보며 다져온 사랑을<br>
-        이제 함께 한 곳을 바라보며 걸어가려 합니다.<br><br>
-        저희 두 사람의 새로운 시작을<br>
-        함께 축복해 주시면 더없는 기쁨으로 간직하겠습니다.
-      </div>
-    </div>
-  </section>
+    <!-- 2. INVITATION SECTION (초대의 글) -->
+    <section class="invitation-section">
+      <div class="section-title-en">INVITATION</div>
+      <h2 class="section-title-kr">초대합니다</h2>
+      <div class="divider"></div>
+      
+      <p class="invitation-text">
+        서로가 마주보며 다져온 사랑을<br>
+        이제 한 곳을 바라보며 커가가고자 합니다.<br><br>
+        저희 두 사람이 사랑의 결실을 맺는 뜻깊은 날,<br>
+        귀한 걸음으로 축복해 주시면<br>
+        더없는 기쁨으로 간직하겠습니다.
+      </p>
 
-  <section class="section">
-    <div class="date-lead reveal">
-      <div class="big-date" id="dateLead">2027.01.02</div>
-      <div class="weekday" id="weekday">토요일 오후 12시</div>
-    </div>
-
-    <div class="calendar reveal">
-      <div class="calendar-grid" id="calendarGrid"></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-title">GALLERY</div>
-    <div class="photo-grid" id="gallery"></div>
-  </section>
-
-  <section class="section">
-    <div class="section-title">LOCATION</div>
-
-    <div class="location-info reveal">
-      <div class="venue" id="venueName">아펠가모 선릉</div>
-      <div class="address" id="venueAddress">
-        서울특별시 강남구 테헤란로 322 한신인터밸리24 빌딩 4층<br>02-2186-6888
-      </div>
-
-      <div class="map-buttons">
-        <a class="chip-button" id="naverMap" href="#" target="_blank">네이버 지도 ↗</a>
-        <a class="chip-button" id="kakaoMap" href="#" target="_blank">카카오맵 ↗</a>
-        <a class="chip-button" id="tmap" href="#" target="_blank">티맵 ↗</a>
-      </div>
-
-      <div class="transport">
-        <div class="transport-row">
-          <strong>[지하철]</strong>
-          <span id="subway">2호선 / 수인분당선 선릉역 4번 출구에서 도보 3분</span>
+      <div class="family-relation">
+        <div class="relation-line">
+          <span>이종수 · 김영희</span> 의 아들 <strong class="person-name">용재</strong>
         </div>
-        <div class="transport-row">
-          <strong>[버스]</strong>
-          <span id="bus">선릉역 정류장 하차 (간선: 146, 341, 360 / 지선: 4412)</span>
-        </div>
-        <div class="transport-row">
-          <strong>[주차]</strong>
-          <span id="parking">건물 내 지하 주차장 이용 (하객 2시간 무료 주차)</span>
+        <div class="relation-line">
+          <span>이철수 · 박순자</span> 의 딸 <strong class="person-name">민진</strong>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="section">
-    <div class="section-title">ACCOUNT</div>
-    <div class="account-subtitle">마음 전하실 곳</div>
-
-    <div class="account-list">
-      <div class="account-group">
-        <button class="account-toggle">
-          <span>신랑측 계좌번호</span><span>∨</span>
+      <!-- 신랑 신부 연락하기 버튼 -->
+      <div class="contact-buttons">
+        <button class="btn-contact" onclick="openContactModal()">
+          <i class="fa-solid fa-phone"></i> 신랑 & 신부에게 연락하기
         </button>
-        <div class="account-content">
-          <div class="account-row">
-            <span>신한 110-123-456789 (이용재)</span>
-            <button class="copy-btn" data-copy="110-123-456789">복사</button>
+      </div>
+    </section>
+
+    <!-- 3. CALENDAR & COUNTDOWN SECTION (일정 및 카운트다운) -->
+    <section class="calendar-section">
+      <div class="section-title-en">WEDDING DAY</div>
+      <h2 class="section-title-kr">2027년 1월 2일 토요일 오후 12:00</h2>
+      
+      <!-- 미니 달력 -->
+      <div class="mini-calendar">
+        <div class="calendar-header">2027. 01</div>
+        <table class="calendar-table">
+          <thead>
+            <tr>
+              <th class="sun">일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th class="sat">토</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sun"></td><td></td><td></td><td></td><td></td><td class="other-month">1</td><td class="sat wedding-day">2</td>
+            </tr>
+            <tr>
+              <td class="sun">3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td class="sat">9</td>
+            </tr>
+            <tr>
+              <td class="sun">10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td class="sat">16</td>
+            </tr>
+            <tr>
+              <td class="sun">17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td class="sat">23</td>
+            </tr>
+            <tr>
+              <td class="sun">24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td class="sat">30</td>
+            </tr>
+            <tr>
+              <td class="sun">31</td><td></td><td></td><td></td><td></td><td></td><td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 디데이 카운트다운 -->
+      <div class="dday-counter" id="ddayCounter">
+        <div class="dday-box"><span id="days">00</span><small>DAYS</small></div>
+        <div class="dday-box"><span id="hours">00</span><small>HOURS</small></div>
+        <div class="dday-box"><span id="minutes">00</span><small>MINS</small></div>
+        <div class="dday-box"><span id="seconds">00</span><small>SECS</small></div>
+      </div>
+      <p class="dday-text" id="ddayText">용재 ♡ 민진의 결혼식이 <span id="ddayNum">0</span>일 남았습니다.</p>
+    </section>
+
+    <!-- 4. GALLERY SECTION (갤러리) -->
+    <section class="gallery-section">
+      <div class="section-title-en">GALLERY</div>
+      <h2 class="section-title-kr">소중한 순간들</h2>
+      <div class="divider"></div>
+
+      <!-- 그리드 갤러리 (JS로 동적 생성) -->
+      <div class="gallery-grid" id="galleryGrid"></div>
+
+      <!-- 갤러리 모달 (클릭 시 큰 이미지 및 슬라이더) -->
+      <div class="gallery-modal" id="galleryModal">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <div class="swiper modal-swiper">
+          <div class="swiper-wrapper" id="modalSwiperWrapper"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LOCATION SECTION (오시는 길) -->
+    <section class="location-section">
+      <div class="section-title-en">LOCATION</div>
+      <h2 class="section-title-kr">오시는 길</h2>
+      <p class="venue-name">아펠가모 선릉</p>
+      <p class="venue-address">서울 강남구 테헤란로 322 한신인터밸리24 빌딩 4층</p>
+      <p class="venue-tel">Tel. 02-2186-6666</p>
+
+      <!-- 카카오 맵 -->
+      <div id="map" class="kakao-map"></div>
+
+      <!-- 네비게이션 앱 연동 버튼 -->
+      <div class="nav-buttons">
+        <button class="btn-nav kakao" onclick="openKakaoNavi()">
+          <i class="fa-solid fa-location-arrow"></i> 카카오내비
+        </button>
+        <button class="btn-nav tmap" onclick="openTmap()">
+          <i class="fa-solid fa-map-location-dot"></i> 티맵
+        </button>
+        <button class="btn-nav naver" onclick="openNaverMap()">
+          <i class="fa-solid fa-map"></i> 네이버지도
+        </button>
+      </div>
+
+      <!-- 교통편 안내 -->
+      <div class="transport-info">
+        <div class="transport-item">
+          <h4><i class="fa-solid fa-subway"></i> 지하철 안내</h4>
+          <p>2호선 / 수인분당선 <strong>선릉역 4번 출구</strong>에서 도보 2분 (약 150m)</p>
+        </div>
+        <div class="transport-item">
+          <h4><i class="fa-solid fa-bus"></i> 버스 안내</h4>
+          <p>선릉역 정류장 하차<br>간선: 146, 341, 360, 740 / 지선: 4412</p>
+        </div>
+        <div class="transport-item">
+          <h4><i class="fa-solid fa-car"></i> 주차 안내</h4>
+          <p>한신인터밸리24 빌딩 지하 주차장 이용 (2시간 무료 주차)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ACCOUNT SECTION (마음 전하실 곳) -->
+    <section class="account-section">
+      <div class="section-title-en">ACCOUNT</div>
+      <h2 class="section-title-kr">마음 전하실 곳</h2>
+      <p class="account-desc">참석이 어려우신 분들을 위해<br>소중한 마음을 전달받을 계좌를 안내해 드립니다.</p>
+      <div class="divider"></div>
+
+      <!-- 신랑측 계좌 아코디언 -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>신랑측 계좌번호</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="accordion-content">
+          <div class="account-box">
+            <div class="account-info">
+              <span class="bank">신한은행</span>
+              <span class="account-num" id="acc-groom">110-123-456789</span>
+              <span class="holder">예금주: 이용재</span>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('acc-groom')">복사</button>
+          </div>
+          <div class="account-box">
+            <div class="account-info">
+              <span class="bank">국민은행</span>
+              <span class="account-num" id="acc-groom-father">123456-04-123456</span>
+              <span class="holder">예금주: 이종수 (부)</span>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('acc-groom-father')">복사</button>
           </div>
         </div>
       </div>
 
-      <div class="account-group">
-        <button class="account-toggle">
-          <span>신부측 계좌번호</span><span>∨</span>
+      <!-- 신부측 계좌 아코디언 -->
+      <div class="accordion-item">
+        <button class="accordion-header" onclick="toggleAccordion(this)">
+          <span>신부측 계좌번호</span>
+          <i class="fa-solid fa-chevron-down"></i>
         </button>
-        <div class="account-content">
-          <div class="account-row">
-            <span>카카오 3333-01-9876543 (이민진)</span>
-            <button class="copy-btn" data-copy="3333-01-9876543">복사</button>
+        <div class="accordion-content">
+          <div class="account-box">
+            <div class="account-info">
+              <span class="bank">카카오뱅크</span>
+              <span class="account-num" id="acc-bride">3333-01-9876543</span>
+              <span class="holder">예금주: 이민진</span>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('acc-bride')">복사</button>
+          </div>
+          <div class="account-box">
+            <div class="account-info">
+              <span class="bank">농협</span>
+              <span class="account-num" id="acc-bride-father">302-1234-5678-91</span>
+              <span class="holder">예금주: 이철수 (부)</span>
+            </div>
+            <button class="btn-copy" onclick="copyAccount('acc-bride-father')">복사</button>
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- 7. GUESTBOOK SECTION (방명록) -->
+    <section class="guestbook-section">
+      <div class="section-title-en">GUESTBOOK</div>
+      <h2 class="section-title-kr">축하 메시지</h2>
+      <div class="divider"></div>
+
+      <!-- 메시지 작성 폼 -->
+      <form id="guestbookForm" class="guestbook-form">
+        <input type="text" id="guestName" placeholder="이름" required maxlength="10">
+        <textarea id="guestMessage" placeholder="축하의 한마디를 남겨주세요." required maxlength="200"></textarea>
+        <button type="submit" class="btn-submit">메시지 등록</button>
+      </form>
+
+      <!-- 메시지 리스트 -->
+      <div class="guestbook-list" id="guestbookList"></div>
+    </section>
+
+    <!-- 8. FOOTER / SHARE (공유하기) -->
+    <footer class="footer-section">
+      <button class="btn-share-kakao" onclick="shareKakao()">
+        <i class="fa-solid fa-comment"></i> 카카오톡으로 청첩장 공유하기
+      </button>
+      <button class="btn-share-link" onclick="copyLink()">
+        <i class="fa-solid fa-link"></i> 링크 복사하기
+      </button>
+
+      <p class="copyright">Copyright © 2027 YONGJAE & MINJIN. All Rights Reserved.</p>
+    </footer>
+
+  </div>
+
+  <!-- 연락하기 모달 -->
+  <div class="modal-overlay" id="contactModal">
+    <div class="modal-content">
+      <span class="modal-close" onclick="closeContactModal()">&times;</span>
+      <h3>연락하기</h3>
+      <div class="contact-list">
+        <div class="contact-row">
+          <span>신랑 이용재</span>
+          <a href="tel:01012345678" class="icon-call"><i class="fa-solid fa-phone"></i></a>
+          <a href="sms:01012345678" class="icon-sms"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+        <div class="contact-row">
+          <span>신부 이민진</span>
+          <a href="tel:01087654321" class="icon-call"><i class="fa-solid fa-phone"></i></a>
+          <a href="sms:01087654321" class="icon-sms"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
 
-  <footer>
-    <div class="footer-mark">THANK YOU</div>
-  </footer>
-</main>
-
-<div class="modal" id="photoModal" aria-hidden="true">
-  <button class="modal-close">×</button>
-  <button class="modal-prev">‹</button>
-  <img id="modalImage" src="" alt="">
-  <button class="modal-next">›</button>
-  <div class="modal-count" id="modalCount"></div>
-</div>
-
-<div class="toast" id="toast"></div>
-
-<script src="script.js"></script>
+  <!-- Swiper.js JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <!-- 카카오 SDK (공유용) -->
+  <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <!-- 커스텀 스크립트 -->
+  <script src="script.js"></script>
 </body>
 </html>
