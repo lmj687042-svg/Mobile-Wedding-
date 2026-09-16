@@ -9,28 +9,26 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="이용재 ♡ 이민진 결혼합니다">
   <meta property="og:description" content="2027년 1월 2일 토요일 오후 12시, 아펠가모 선릉">
-  <!-- 💥 아래 og:image에 띄우고 싶은 '다른 사진' 경로를 적어주세요! -->
-  <meta property="og:image" content="https://본인아이디.github.io/레포지토리이름/images/og.jpg">
-  <meta property="og:url" content="https://본인아이디.github.io/레포지토리이름/">
+  <!-- 📸 og 폴더 안의 1.jpg 대표 사진 지정 -->
+  <meta property="og:image" content="https://lmj687042-svg.github.io/Mobile-Wedding-/images/og/1.jpg">
+  <meta property="og:url" content="https://lmj687042-svg.github.io/Mobile-Wedding-/">
 
   <title>이용재 & 이민진 · OUR WEDDING</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Noto+Serif+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <main class="page">
-  <!-- 상단 주황색 고정 헤더 -->
   <header class="top-header">
     <div class="header-title">The Wedding of</div>
     <button class="menu-icon" aria-label="메뉴">☰</button>
   </header>
 
-  <!-- COVER SECTION (첫 페이지) -->
   <section class="cover">
     <div class="cover-hero-header">
       <div class="cover-kicker">You're invited</div>
@@ -46,18 +44,17 @@
     </div>
 
     <div class="cover-photo-wrap">
-      <img class="cover-photo" src="images/hero/1.jpg" alt="메인 웨딩 사진">
+      <img class="cover-photo" src="images/hero/1.jpg" alt="메인 사진">
     </div>
   </section>
 
-  <!-- INVITATION SECTION -->
   <section class="section">
     <div class="intro-text-block reveal">
       <h2 class="join-title">Join us<br>for our wedding</h2>
-      
+
       <div class="family-info">
-        <div>아버님 · 어머님 <span class="role">의 아들</span> <strong id="groomFullName">이용재</strong></div>
-        <div>아버님 · 어머님 <span class="role">의 딸</span> <strong id="brideFullName">이민진</strong></div>
+        <div>이종수 · 김영희 <span class="role">의 아들</span> <strong id="groomFullName">용재</strong></div>
+        <div>이철수 · 박순자 <span class="role">의 딸</span> <strong id="brideFullName">민진</strong></div>
       </div>
 
       <div class="section-title">INVITATION</div>
@@ -70,7 +67,6 @@
     </div>
   </section>
 
-  <!-- CALENDAR SECTION -->
   <section class="section">
     <div class="date-lead reveal">
       <div class="big-date" id="dateLead">2027.01.02</div>
@@ -82,13 +78,11 @@
     </div>
   </section>
 
-  <!-- GALLERY SECTION -->
   <section class="section">
     <div class="section-title">GALLERY</div>
     <div class="photo-grid" id="gallery"></div>
   </section>
 
-  <!-- LOCATION SECTION -->
   <section class="section">
     <div class="section-title">LOCATION</div>
 
@@ -121,7 +115,6 @@
     </div>
   </section>
 
-  <!-- ACCOUNT SECTION -->
   <section class="section">
     <div class="section-title">ACCOUNT</div>
     <div class="account-subtitle">마음 전하실 곳</div>
@@ -133,8 +126,8 @@
         </button>
         <div class="account-content">
           <div class="account-row">
-            <span>OO은행 000-0000-0000 (이용재)</span>
-            <button class="copy-btn" data-copy="000-0000-0000">복사</button>
+            <span>신한 110-123-456789 (이용재)</span>
+            <button class="copy-btn" data-copy="110-123-456789">복사</button>
           </div>
         </div>
       </div>
@@ -145,8 +138,8 @@
         </button>
         <div class="account-content">
           <div class="account-row">
-            <span>OO은행 000-0000-0000 (이민진)</span>
-            <button class="copy-btn" data-copy="000-0000-0000">복사</button>
+            <span>카카오 3333-01-9876543 (이민진)</span>
+            <button class="copy-btn" data-copy="3333-01-9876543">복사</button>
           </div>
         </div>
       </div>
@@ -156,10 +149,8 @@
   <footer>
     <div class="footer-mark">THANK YOU</div>
   </footer>
-
 </main>
 
-<!-- MODAL & TOAST -->
 <div class="modal" id="photoModal" aria-hidden="true">
   <button class="modal-close">×</button>
   <button class="modal-prev">‹</button>
